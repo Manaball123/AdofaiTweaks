@@ -21,7 +21,6 @@ namespace AdofaiTweaks.Compat.Async
         public static bool IsAsyncInputEnabled => IsAsyncEnabled_Hook();
         public static bool IsAsyncEnabled_Hook()
         {
-
             var bindingFlags = System.Reflection.BindingFlags.IgnoreReturn;
             unchecked
             {
@@ -31,7 +30,6 @@ namespace AdofaiTweaks.Compat.Async
             Object instance = SkyHookManager.Instance;
             MethodInfo[] meths = instance.GetType().GetMethods();
 
-
             foreach (MethodInfo item in meths)
             {
                 if(item.Name == "get_isHookActive")
@@ -40,8 +38,6 @@ namespace AdofaiTweaks.Compat.Async
                 }
             }
             throw new System.Exception("wtf dude...");
-             
-            
         }
 
         /// <summary>
